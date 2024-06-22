@@ -20,5 +20,4 @@ export class JuegoComponent {
   nuevoJuego() {
     this.palabrasService.nuevoJuego();
   }
-
 }

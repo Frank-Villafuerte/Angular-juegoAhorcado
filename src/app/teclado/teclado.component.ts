@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-teclado',
@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './teclado.component.css'
 })
 export class TecladoComponent {
+  @Output() letraClick = new EventEmitter<string>();
 
+  letras: string[] = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+
+  presionarTecla(letra: string) {
+    this.letraClick.emit(letra);
+  }
 }
