@@ -1,0 +1,14 @@
+.fila{
+    
+  display: flex;
+  justify-content: center;
+}
+button {
+    
+    padding: 10px;
+    margin: 5px;
+    
+}
+
+
+  

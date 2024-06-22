@@ -1,2 +1,29 @@
 <p>teclado works!</p>
+<div class="teclado">
+    <div class="fila">
+        @for(letra of letras1;track letra){
+            <button (click)="presionarTecla(letra)">
+                {{letra}}
+            </button>
+        }
+    </div>
+    <div class="fila" >
+        @for(letra of letras2;track letra){
+            <button (click)="presionarTecla(letra)">
+                {{letra}}
+            </button>
+        }
+    </div>
+    <div class="fila">
+        @for(letra of letras3;track letra){
+            <button (click)="presionarTecla(letra)">
+                {{letra}}
+            </button>
+        }
+    </div>
+    
+    
+    
+    
+</div>
 
