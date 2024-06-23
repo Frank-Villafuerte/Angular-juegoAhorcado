@@ -20,4 +20,7 @@
     
 
 </div>
-<app-teclado (letraClick)="usarLetra($event)"></app-teclado>
+@if(!palabrasService.isGameOver()){
+    <app-teclado (letraClick)="usarLetra($event)"></app-teclado>
+}
+
