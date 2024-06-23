@@ -4,7 +4,74 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class PalabrasService{
-  private palabras: string[] = ['angular', 'javascript', 'typescript', 'component', 'service'];
+  private cortas: string[]= [
+    "CASA",
+    "PERRO",
+    "GATO",
+    "SOL",
+    "ROJO",
+    "AZUL",
+    "VINO",
+    "LUZ",
+    "FLOR",
+    "MESA",
+    "TREN",
+    "PIEL",
+    "PESO",
+    "HOJA",
+    "COCO",
+    "RANA",
+    "PATO",
+    "LUNA",
+    "BOLA",
+    "CIELO"
+  ];
+  private medianas: string[]= [
+    "TELEVISOR",
+    "COMPUTADORA",
+    "ELEFANTE",
+    "CABALLO",
+    "GUITARRA",
+    "CERVEZA",
+    "COCHE",
+    "CASCADA",
+    "CIGARRILLO",
+    "PANTALLA",
+    "CARTERA",
+    "CINTURON",
+    "CUBIERTO",
+    "CABINA",
+    "CANGURO",
+    "CESPED",
+    "CAMARA",
+    "CELULA",
+    "CIRCULO",
+    "CODIGO"
+  ];
+  private largas: string[]= [
+    "ELECTRICIDAD",
+    "EXTRATERRESTRE",
+    "INDEPENDENCIA",
+    "CONSTITUCION",
+    "FOTOGRAFIA",
+    "DETERMINACION",
+    "INVESTIGACION",
+    "CONGRATULACIONES",
+    "INCONSTITUCIONALIDAD",
+    "ANTICONSTITUCIONALIDAD",
+    "SUPERCALIFRAGILISTICOESPIALIDOSO",
+    "HIPERCONECTIVIDAD",
+    "INCOMPRENSIBILIDAD",
+    "INCONMENSURABILIDAD",
+    "INCONMENSURABLEMENTE",
+    "INCONMENSURABLE",
+    "INCONSTITUCIONAL",
+    "INCONMENSURADO",
+    "INCONMENSURABLES",
+    "INCONMENSURABLEMENTES"
+  ];
+  private palabras: string[] = this.medianas;
+  
   private palabraActual: string = '';
   private letrasUsadas: string[] = [];
   private letrasIncorrectas: number = 0;
@@ -18,6 +85,7 @@ export class PalabrasService{
     this.palabraActual = this.palabras[Math.floor(Math.random() * this.palabras.length)];
     this.letrasUsadas = [];
     this.letrasIncorrectas = 0;
+    console.log(this.palabraActual);
   }
   getPalabraActual(){
     return this.palabraActual;
@@ -29,6 +97,7 @@ export class PalabrasService{
         this.letrasIncorrectas++;
       }
     }
+    this.mostrarLetra();
   }
 
   mostrarLetra(): string {

@@ -11,11 +11,9 @@ import { TecladoComponent } from '../teclado/teclado.component';
 export class JuegoComponent {
   constructor(public palabrasService: PalabrasService) { }
 
-  ngOnInit(): void {
-  }
-
-  usarLetra(letter: string) {
-    this.palabrasService.usarLetra(letter);
+  usarLetra(letra: string) {
+    console.log(`Tecla presionada: ${letra}`);
+    this.palabrasService.usarLetra(letra);
   }
 
   nuevoJuego() {

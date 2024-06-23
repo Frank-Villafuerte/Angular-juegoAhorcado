@@ -3,6 +3,21 @@
 <div>
     <h1>Juego del Ahorcado</h1>
     <p>{{ palabrasService.mostrarLetra() }}</p>
+    <p>Intentos incorrectos: {{ palabrasService.getLetrasIncorrectas() }}</p>
+    @if(palabrasService.isGameOver()){
+        <p >
+            Juego terminado. 
+            @if(palabrasService.palabraEncontrada()){
+                <span>¡Ganaste!</span>
+            }
+            @if(!palabrasService.palabraEncontrada()){
+                <span>Perdiste. La palabra era {{ palabrasService.getPalabraActual() }}.</span>
+            }
+            
+            
+        </p>
+    }
     
+
 </div>
-<app-teclado></app-teclado>
+<app-teclado (letraClick)="usarLetra($event)"></app-teclado>

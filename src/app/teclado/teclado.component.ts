@@ -9,7 +9,8 @@ import { NgForOf} from '@angular/common';
   styleUrl: './teclado.component.css'
 })
 export class TecladoComponent {
-  @Output() letraClick = new EventEmitter<string>();
+  @Output() 
+  letraClick = new EventEmitter<string>();
 
   letras1: string[] = 'QWERTYUIOP'.split("");
   letras2: string[] = 'ASDFGHJKL'.split("");
