@@ -3,11 +3,28 @@
   display: flex;
   justify-content: center;
 }
+
 button {
-    
-    padding: 10px;
-    margin: 5px;
-    
+  font-size: 25px; /* Tamaño de fuente más grande */
+  background-color: black; /* Fondo negro */
+  color: white; /* Letras blancas */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer;
+   
+  padding: 10px;
+  margin: 5px;
+  /* Otros estilos aquí */
+}
+button:hover {
+  background-color: #660000;
+}
+.teclado{
+  background-image: url('../assets/madera.jpg');
+  background-repeat: no-repeat; 
+  background-size: cover;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 

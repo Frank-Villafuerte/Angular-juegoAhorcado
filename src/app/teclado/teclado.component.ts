@@ -15,7 +15,12 @@ export class TecladoComponent {
   letras1: string[] = 'QWERTYUIOP'.split("");
   letras2: string[] = 'ASDFGHJKL'.split("");
   letras3: string[] = 'ZXCVBNM'.split("");
+  
+
   presionarTecla(letra: string) {
+    var imagen = document.createElement("img");
+    imagen.src="../assets/x.png"
+    imagen.alt="Boton ya utilizado"
     this.letraClick.emit(letra);
   }
  

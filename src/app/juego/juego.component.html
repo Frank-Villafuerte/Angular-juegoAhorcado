@@ -1,7 +1,13 @@
-<p>juego works!</p>
-<a href="/">Volver al Menú Principal</a>
-<div>
-    <h1>Juego del Ahorcado</h1>
+
+
+<div class="fondo">
+    <a href="/">Volver al Menú Principal</a>
+    <div class="cnt">
+        <div id="imgn" class="img"></div>
+    </div>
+    
+    
+    
     <p>{{ palabrasService.mostrarLetra() }}</p>
     <p>Intentos incorrectos: {{ palabrasService.getLetrasIncorrectas() }}</p>
     @if(palabrasService.isGameOver()){
@@ -17,10 +23,10 @@
             
         </p>
     }
-    
-
-</div>
-@if(!palabrasService.isGameOver()){
+    @if(!palabrasService.isGameOver()){
     <app-teclado (letraClick)="usarLetra($event)"></app-teclado>
 }
+
+</div>
+
 

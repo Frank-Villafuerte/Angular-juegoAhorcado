@@ -1,0 +1,37 @@
+h1 {
+    font-size: 28px;
+    color: #FFFF;
+    text-align: center;
+    text-shadow: 2px 2px 4px black;
+    margin-bottom: 70px;
+    font-family: 'Times New Roman', serif;
+    font-size: 70px;
+}
+
+
+a {
+    display: block;
+    width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #990000;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-family: 'Courier New', monospace;
+    font-size: 50px;
+    /* Otros estilos aquí */
+}
+
+a:hover {
+    background-color: #660000;
+}
+.menu {
+    background-image: url('assets/imagenes/casa.png');
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    height: 100vh;
+    padding-top: 200px;
+}

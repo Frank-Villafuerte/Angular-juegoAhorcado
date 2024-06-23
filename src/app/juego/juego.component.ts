@@ -9,11 +9,32 @@ import { TecladoComponent } from '../teclado/teclado.component';
   styleUrl: './juego.component.css'
 })
 export class JuegoComponent {
+  
   constructor(public palabrasService: PalabrasService) { }
 
   usarLetra(letra: string) {
-    console.log(`Tecla presionada: ${letra}`);
     this.palabrasService.usarLetra(letra);
+
+    let img=document.getElementById("imgn") as HTMLElement;
+    if(this.palabrasService.getLetrasIncorrectas()==1){
+      img.style.backgroundImage="url('assets/imagenes/cabeza.png')";
+    }
+    if(this.palabrasService.getLetrasIncorrectas()==2){
+      img.style.backgroundImage="url('assets/imagenes/torso.png')";
+    }
+    if(this.palabrasService.getLetrasIncorrectas()==3){
+      img.style.backgroundImage="url('assets/imagenes/1b.png')";
+    }
+    if(this.palabrasService.getLetrasIncorrectas()==4){
+      img.style.backgroundImage="url('assets/imagenes/2b.png')";
+    }
+    if(this.palabrasService.getLetrasIncorrectas()==5){
+      img.style.backgroundImage="url('assets/imagenes/1p.png')";
+    }
+    if(this.palabrasService.getLetrasIncorrectas()==6){
+      img.style.backgroundImage="url('assets/imagenes/go.png')";
+    }
+    
   }
 
   nuevoJuego() {
